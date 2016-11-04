@@ -63,7 +63,8 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-size: 13px; }
+    font-size: 13px;
+    padding: 60px 0; }
     .wrapper .text-container .power {
       width: 23%; }
       .wrapper .text-container .power h3 {
@@ -97,7 +98,7 @@
 
 .container {
   background: #2a2d32;
-  padding: 50px 50px; }
+  padding: 50px 0; }
   .container h3 {
     color: #fff;
     padding-bottom: 30px; }
@@ -118,3 +119,71 @@
       padding-top: 30px; }
     .container .our_services a:hover {
       color: #f4b60d; }
+
+.brend-icons {
+  width: 1160px;
+  margin: 0 auto; }
+
+.foot_link {
+  background: #2a2d32; }
+  .foot_link .link_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 40px 0;
+    width: 1160px;
+    margin: 0 auto; }
+    .foot_link .link_box div {
+      width: 20%; }
+      .foot_link .link_box div h4 {
+        color: #fff;
+        margin: 0; }
+      .foot_link .link_box div ul {
+        padding: 0; }
+        .foot_link .link_box div ul li {
+          list-style: none;
+          border-bottom: 1px solid #5d5f61; }
+          .foot_link .link_box div ul li a {
+            display: block;
+            text-decoration: none;
+            color: #5d5f61;
+            padding: 10px 0; }
+          .foot_link .link_box div ul li a:hover {
+            color: #248cec; }
+
+footer {
+  background: #3c3e40;
+  color: #5d5f61; }
+  footer .footer_container {
+    width: 1160px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    footer .footer_container .contact_inform {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      footer .footer_container .contact_inform p {
+        display: block;
+        margin-right: 20px; }
+      footer .footer_container .contact_inform .locate:before {
+        content: url("../img/location.png");
+        margin-right: 10px; }
+      footer .footer_container .contact_inform .phone:before {
+        content: url("../img/iphone.png");
+        margin-right: 10px; }
+      footer .footer_container .contact_inform .mail:before {
+        content: url("../img/email.png");
+        margin-right: 10px; }
