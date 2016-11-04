@@ -155,6 +155,8 @@
             padding: 10px 0; }
           .foot_link .link_box div ul li a:hover {
             color: #248cec; }
+      .foot_link .link_box div .last_link {
+        border: none; }
 
 footer {
   background: #3c3e40;

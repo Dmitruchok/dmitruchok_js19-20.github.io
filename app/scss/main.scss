@@ -135,6 +135,9 @@
     img{
       padding-right: 50px;
     }
+    img:hover {
+      //background: rgba($red, $red, $red, $alpha);
+    }
     a {
       display: block;
       color: #fff;
@@ -159,6 +162,9 @@
     div {
       width: 20%;
       @include foot-link;
+      .last_link {
+        border: none;
+      }
     }
   }
 }
