@@ -11,6 +11,13 @@
     margin-left: 10px;
   }
 }
+
+@mixin hover-link {
+  a:hover {
+    color: #f4b60d;
+  }
+}
+
 .wrapper {
   width: 1160px;
   margin: 0 auto;
@@ -34,21 +41,20 @@
     ul {
       display: flex;
       padding: 0;
+      margin: 0;
+      .blue{
+        background: #248cec;
+      }
       li {
         list-style: none;
-        .blue{
-          background: #248cec;
-        }
+        padding: 17px 25px;
+        border-right: 1px solid #000;
         a {
           font-size: 15px;
           color: #fff;
           text-decoration: none;
-          padding: 17px 25px;
-          border-right: 1px solid #000;
         }
-        a:hover {
-          color: #f4b60d;
-        }
+        @include hover-link;
       }
     }
     input {
@@ -85,6 +91,31 @@
       width: 23%;
       @include column;
     }
+  }
+}
 
+.container {
+  background: #2a2d32;
+  padding: 50px 50px;
+  h3{
+    color: #fff;
+    padding-bottom: 30px;
+  }
+  .our_services{
+    width: 1160px;
+    margin: 0 auto;
+    .all_services {
+      display: flex;
+    }
+    img{
+      padding-right: 50px;
+    }
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding-top: 30px;
+    }
+    @include hover-link;
   }
 }

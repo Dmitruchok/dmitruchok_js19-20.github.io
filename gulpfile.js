@@ -6,9 +6,9 @@ var gulp = require('gulp'),
   cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
   rename = require('gulp-rename'), // Подключаем библиотеку для переименования
   del = require('del'), // Подключаем библиотеку для удаления файлов и папок
-  imagemin    = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
-  pngquant    = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
-  cache       = require('gulp-cache') // Подключаем библиотеку кеширования
+  imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
+  pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+  cache = require('gulp-cache') // Подключаем библиотеку кеширования
   autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 
@@ -21,7 +21,7 @@ gulp.task('sass', function(){ // Создаем таск Sass
 });
 
 gulp.task('js', function(){ // Создаем таск js
-  return gulp.src('app/js/src/**/*.js') // Берем источник
+  return gulp.src('app/js/src/*.js') // Берем источник
   .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле script.min.js
   .pipe(uglify()) // Сжимаем JS файл
   .pipe(gulp.dest('app/js/dist')) // Выгружаем результата в папку app/js
@@ -47,6 +47,16 @@ gulp.task('scripts', function() {
   .pipe(gulp.dest('app/js/dist')); // Выгружаем в папку app/js
 });
 
+/*gulp.task('scripts-js', function() {
+  return gulp.src([ // Берем все необходимые
+    'app/js/src/fotorama.js',
+    'app/js/src/script.js'
+  ])
+  .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле script.min.js
+  .pipe(uglify()) // Сжимаем JS файл
+  .pipe(gulp.dest('app/js/dist')); // Выгружаем в папку app/js
+});*/
+
 gulp.task('css-libs', ['sass'], function() {
   return gulp.src('app/css/libs.css') // Выбираем файл для минификации
   .pipe(cssnano()) // Сжимаем
@@ -54,11 +64,10 @@ gulp.task('css-libs', ['sass'], function() {
   .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-
-gulp.task('watch', ['browser-sync', 'css-libs', 'js', 'sass', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'js', 'css-libs', 'sass', 'scripts'], function() {
   gulp.watch('app/scss/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
   gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-  gulp.watch('app/js/dist/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
+  gulp.watch('app/js/src/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('clean', function() {

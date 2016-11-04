@@ -28,17 +28,18 @@
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
+      .wrapper nav ul .blue {
+        background: #248cec; }
       .wrapper nav ul li {
-        list-style: none; }
-        .wrapper nav ul li .blue {
-          background: #248cec; }
+        list-style: none;
+        padding: 17px 25px;
+        border-right: 1px solid #000; }
         .wrapper nav ul li a {
           font-size: 15px;
           color: #fff;
-          text-decoration: none;
-          padding: 17px 25px;
-          border-right: 1px solid #000; }
+          text-decoration: none; }
         .wrapper nav ul li a:hover {
           color: #f4b60d; }
     .wrapper nav input {
@@ -93,3 +94,27 @@
       .wrapper .text-container .support a::after {
         content: url("../img/shape_blue.png");
         margin-left: 10px; }
+
+.container {
+  background: #2a2d32;
+  padding: 50px 50px; }
+  .container h3 {
+    color: #fff;
+    padding-bottom: 30px; }
+  .container .our_services {
+    width: 1160px;
+    margin: 0 auto; }
+    .container .our_services .all_services {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .container .our_services img {
+      padding-right: 50px; }
+    .container .our_services a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding-top: 30px; }
+    .container .our_services a:hover {
+      color: #f4b60d; }
