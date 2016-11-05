@@ -22,5 +22,8 @@
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.0.0",
     "opn": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp.spritesmith": "^6.2.1"
   }
 }

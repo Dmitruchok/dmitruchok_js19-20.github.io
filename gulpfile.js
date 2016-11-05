@@ -10,6 +10,8 @@ var gulp = require('gulp'),
   pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
   cache = require('gulp-cache') // Подключаем библиотеку кеширования
   autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+  spritesmith = require('gulp.spritesmith');// Подключаем библиотеку для автоматического добавления префиксов
+
 
 
 gulp.task('sass', function(){ // Создаем таск Sass
@@ -47,16 +49,6 @@ gulp.task('scripts', function() {
   .pipe(gulp.dest('app/js/dist')); // Выгружаем в папку app/js
 });
 
-/*gulp.task('scripts-js', function() {
-  return gulp.src([ // Берем все необходимые
-    'app/js/src/fotorama.js',
-    'app/js/src/script.js'
-  ])
-  .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле script.min.js
-  .pipe(uglify()) // Сжимаем JS файл
-  .pipe(gulp.dest('app/js/dist')); // Выгружаем в папку app/js
-});*/
-
 gulp.task('css-libs', ['sass'], function() {
   return gulp.src('app/css/libs.css') // Выбираем файл для минификации
   .pipe(cssnano()) // Сжимаем
@@ -64,10 +56,20 @@ gulp.task('css-libs', ['sass'], function() {
   .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
 
-gulp.task('watch', ['browser-sync', 'js', 'css-libs', 'sass', 'scripts'], function() {
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('app/img/for_sprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.scss',
+    algoritm: 'left-right'
+  }));
+  return spriteData.pipe(gulp.dest('app/img/sprites'));
+});
+
+gulp.task('watch', ['browser-sync', 'css-libs', 'sprite', 'sprite', 'scripts'], function() {
   gulp.watch('app/scss/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
   gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-  gulp.watch('app/js/src/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
+  gulp.watch('app/js/src/**/*.js', ['js'], browserSync.reload); // Наблюдение за JS файлами в папке js
+  gulp.watch('app/img/for_sprite/*.png', ['sprite'], browserSync.reload); // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('clean', function() {

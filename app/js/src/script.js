@@ -7,6 +7,7 @@ $(function () {
     return false;
     $('#text1').css('display', 'block')
   });*/
+  console.log('hi');
 
   $("#accordion section h1").click(function(e) {
   $(this).parents().siblings("section").addClass("ac_hidden");
