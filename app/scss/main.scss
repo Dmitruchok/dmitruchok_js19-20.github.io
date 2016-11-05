@@ -1,3 +1,5 @@
+@import "../css/sprite";
+
 @mixin column {
   h3{
     font-size: 20px
@@ -6,9 +8,21 @@
     text-decoration: none;
     color: #000;
   }
+  a:hover {
+    color: #248cec;
+  }
   a::after {
-    content: url("../img/shape_blue.png");
+    background: url('../img/sprites/sprite.png') -10px 0 no-repeat;
+    content: "";
+    width: 10px;
+    height: 11px;
+    overflow: hidden;
+    vertical-align: middle;
     margin-left: 10px;
+    display: inline-block;
+  }
+  a:hover::after {
+    background-position: 0 0;
   }
   img {
     margin-top: 10px;
@@ -87,8 +101,6 @@
       }
     }
 
-
-
     input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
@@ -141,11 +153,13 @@
     color: #fff;
     padding-bottom: 30px;
   }
+
   .our_services{
     @include margin;
     .all_services {
       display: flex;
     }
+
     img{
       padding-right: 50px;
     }
@@ -185,6 +199,9 @@
             color: #000;
             margin-bottom: 0;
           }
+          h4:hover {
+            color: #248cec;
+          }
           .under_text {
             display: flex;
             span {
@@ -213,6 +230,9 @@
           h4 {
             color: #000;
             margin-bottom: 0;
+          }
+          h4:hover {
+            color: #248cec;
           }
           .under_text {
             display: flex;

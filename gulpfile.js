@@ -62,7 +62,8 @@ gulp.task('sprite', function () {
     cssName: 'sprite.scss',
     algoritm: 'left-right'
   }));
-  return spriteData.pipe(gulp.dest('app/img/sprites'));
+  spriteData.img.pipe(gulp.dest('app/img/sprites'));
+  spriteData.css.pipe(gulp.dest('app/css/'));
 });
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'sprite', 'sprite', 'scripts'], function() {
