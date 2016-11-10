@@ -1,4 +1,4 @@
-@import "../css/sprite";
+@import "../scss/_sprite";
 @import "../scss/_mixins";
 @import "../scss/_fonts";
 @import "../scss/_variable";
@@ -12,48 +12,82 @@
       color: #fff;
       padding-bottom: 30px;
     }
+
     @include margin;
     .all_services {
       display: flex;
-    }
 
-    a:hover::before {
-      //background: rgba(36, 140, 236,.3);
-      background-color:#2c4070;
-      opacity:0.2;
-    }
     .schedule_srvices {
-      .schedule_pic::before{
+
+      .schedule_pic {
         background: url(../img/Untitled-10.png) no-repeat;
         @include service-pic;
       }
+      .schedule_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236,.3);
+        @include service-pic;
+      }
+
+      h4 {
+        color: #fff;
+      }
     }
     .preventiv_maintence {
-      .preventiv_pic::before{
+
+      .preventiv_pic {
         background: url(../img/rdJD.png) no-repeat;
         @include service-pic;
+      }
+
+      .preventiv_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236,.3);
+        @include service-pic;
+      }
+
+      h4 {
+        color: #fff;
       }
     }
 
     .wheel_srvices {
-      .wheel_pic::before{
+      .wheel_pic {
         background: url(../img/Rectangle.png) no-repeat;
         @include service-pic;
       }
+
+      .wheel_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236,.3);
+        @include service-pic;
+      }
+
+      h4 {
+        color: #fff;
+      }
     }
     .repair_services {
-      .repair_pic::before {
+      .repair_pic {
         background: url(../img/Selective.png) no-repeat;
         @include service-pic;
       }
-    }
 
-    a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding-top: 30px;
+      .repair_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236,.3);
+        @include service-pic;
+      }
+
+      h4 {
+        color: #fff;
+      }
     }
     @include hover-link;
   }
+}
 }

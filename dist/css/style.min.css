@@ -227,8 +227,8 @@ The `sprites` mixin generates identical output to the CSS template
           font-size: 15px;
           color: #fff;
           text-decoration: none; }
-        .wrapper nav ul li a:hover {
-          color: #f4b60d; }
+        .wrapper nav ul li a:hover + h4 {
+          color: yellow; }
     .wrapper nav input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
@@ -418,48 +418,88 @@ The `sprites` mixin generates identical output to the CSS template
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    .container .our_services a:hover::before {
-      background-color: #2c4070;
-      opacity: 0.2; }
-    .container .our_services .schedule_srvices .schedule_pic::before {
-      background: url(../img/Untitled-10.png) no-repeat;
-      content: "";
-      width: 260px;
-      height: 260px;
-      margin: 0 40px 40px 0;
-      vertical-align: middle;
-      display: inline-block; }
-    .container .our_services .preventiv_maintence .preventiv_pic::before {
-      background: url(../img/rdJD.png) no-repeat;
-      content: "";
-      width: 260px;
-      height: 260px;
-      margin: 0 40px 40px 0;
-      vertical-align: middle;
-      display: inline-block; }
-    .container .our_services .wheel_srvices .wheel_pic::before {
-      background: url(../img/Rectangle.png) no-repeat;
-      content: "";
-      width: 260px;
-      height: 260px;
-      margin: 0 40px 40px 0;
-      vertical-align: middle;
-      display: inline-block; }
-    .container .our_services .repair_services .repair_pic::before {
-      background: url(../img/Selective.png) no-repeat;
-      content: "";
-      width: 260px;
-      height: 260px;
-      margin: 0 40px 40px 0;
-      vertical-align: middle;
-      display: inline-block; }
-    .container .our_services a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding-top: 30px; }
-    .container .our_services a:hover {
-      color: #f4b60d; }
+      .container .our_services .all_services .schedule_srvices .schedule_pic {
+        background: url(../img/Untitled-10.png) no-repeat;
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .schedule_srvices .schedule_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236, 0.3);
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .schedule_srvices h4 {
+        color: #fff; }
+      .container .our_services .all_services .preventiv_maintence .preventiv_pic {
+        background: url(../img/rdJD.png) no-repeat;
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .preventiv_maintence .preventiv_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236, 0.3);
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .preventiv_maintence h4 {
+        color: #fff; }
+      .container .our_services .all_services .wheel_srvices .wheel_pic {
+        background: url(../img/Rectangle.png) no-repeat;
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .wheel_srvices .wheel_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236, 0.3);
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .wheel_srvices h4 {
+        color: #fff; }
+      .container .our_services .all_services .repair_services .repair_pic {
+        background: url(../img/Selective.png) no-repeat;
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .repair_services .repair_pic:hover::before {
+        background: url(../img/1.png) no-repeat;
+        background-position: center;
+        background-color: rgba(36, 140, 236, 0.3);
+        content: "";
+        width: 260px;
+        height: 260px;
+        margin: 0 40px 40px 0;
+        vertical-align: middle;
+        display: inline-block; }
+      .container .our_services .all_services .repair_services h4 {
+        color: #fff; }
+      .container .our_services .all_services a:hover + h4 {
+        color: yellow; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -630,9 +670,14 @@ The `sprites` mixin generates identical output to the CSS template
         .news .all_news .latest_news .foot_box p {
           font-family: "Aileron-Regular"; }
     .news .all_news .accordion {
-      width: 40%; }
-      .news .all_news .accordion h5 {
-        border: 1px solid #000; }
+      width: 600px; }
+      .news .all_news .accordion .active h5 {
+        display: block;
+        border: 1px solid #000;
+        margin: 10px 30px; }
+      .news .all_news .accordion .active h5::before {
+        content: url("../img/plus.png");
+        border-right: 1px solid; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name

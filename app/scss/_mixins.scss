@@ -29,8 +29,8 @@
 }
 
 @mixin hover-link {
-  a:hover {
-    color: #f4b60d;
+  a:hover+h4 {
+    color: yellow;
   }
 }
 

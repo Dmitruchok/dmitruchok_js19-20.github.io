@@ -74,13 +74,14 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('app/img/for_sprite/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('app/img/for_sprite/*.png')
+  .pipe(spritesmith({
     imgName: 'sprite.png',
-    cssName: 'sprite.scss',
+    cssName: '_sprite.scss',
     algoritm: 'left-right'
   }));
   spriteData.img.pipe(gulp.dest('app/img/sprites'));
-  spriteData.css.pipe(gulp.dest('app/css/'));
+  spriteData.css.pipe(gulp.dest('app/scss/'));
 });
 
 gulp.task('watch', ['browser-sync', 'scss', 'css', 'html', 'js', 'img', 'fonts', 'scripts'], function() {
