@@ -74,7 +74,9 @@
           color: #fff;
           text-decoration: none;
         }
-        @include hover-link;
+        a:hover {
+          color: #f4b60d;
+        }
       }
     }
 

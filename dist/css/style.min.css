@@ -227,8 +227,8 @@ The `sprites` mixin generates identical output to the CSS template
           font-size: 15px;
           color: #fff;
           text-decoration: none; }
-        .wrapper nav ul li a:hover + h4 {
-          color: yellow; }
+        .wrapper nav ul li a:hover {
+          color: #f4b60d; }
     .wrapper nav input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
@@ -429,7 +429,7 @@ The `sprites` mixin generates identical output to the CSS template
       .container .our_services .all_services .schedule_srvices .schedule_pic:hover::before {
         background: url(../img/1.png) no-repeat;
         background-position: center;
-        background-color: rgba(36, 140, 236, 0.3);
+        background-color: rgba(7, 91, 169, 0.7);
         content: "";
         width: 260px;
         height: 260px;
@@ -449,7 +449,7 @@ The `sprites` mixin generates identical output to the CSS template
       .container .our_services .all_services .preventiv_maintence .preventiv_pic:hover::before {
         background: url(../img/1.png) no-repeat;
         background-position: center;
-        background-color: rgba(36, 140, 236, 0.3);
+        background-color: rgba(7, 91, 169, 0.7);
         content: "";
         width: 260px;
         height: 260px;
@@ -469,7 +469,7 @@ The `sprites` mixin generates identical output to the CSS template
       .container .our_services .all_services .wheel_srvices .wheel_pic:hover::before {
         background: url(../img/1.png) no-repeat;
         background-position: center;
-        background-color: rgba(36, 140, 236, 0.3);
+        background-color: rgba(7, 91, 169, 0.7);
         content: "";
         width: 260px;
         height: 260px;
@@ -489,7 +489,7 @@ The `sprites` mixin generates identical output to the CSS template
       .container .our_services .all_services .repair_services .repair_pic:hover::before {
         background: url(../img/1.png) no-repeat;
         background-position: center;
-        background-color: rgba(36, 140, 236, 0.3);
+        background-color: rgba(7, 91, 169, 0.7);
         content: "";
         width: 260px;
         height: 260px;
@@ -499,7 +499,7 @@ The `sprites` mixin generates identical output to the CSS template
       .container .our_services .all_services .repair_services h4 {
         color: #fff; }
       .container .our_services .all_services a:hover + h4 {
-        color: yellow; }
+        color: #f4b60d; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -585,10 +585,11 @@ The `sprites` mixin generates identical output to the CSS template
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    padding: 40px 0 100px 0;
     width: 1160px;
     margin: 0 auto; }
     .news .all_news .latest_news {
-      padding: 40px 0 100px 0; }
+      width: 65%; }
       .news .all_news .latest_news .head_box {
         display: -webkit-box;
         display: -webkit-flex;
@@ -609,7 +610,7 @@ The `sprites` mixin generates identical output to the CSS template
               -ms-flex-direction: column;
                   flex-direction: column;
           color: #8a8a8a;
-          width: 35%; }
+          width: 47%; }
           .news .all_news .latest_news .head_box .advanced_machinery h4 {
             color: #000;
             margin-bottom: 0; }
@@ -649,7 +650,7 @@ The `sprites` mixin generates identical output to the CSS template
               -ms-flex-direction: column;
                   flex-direction: column;
           color: #8a8a8a;
-          width: 35%; }
+          width: 47%; }
           .news .all_news .latest_news .foot_box .powerful h4 {
             color: #000;
             margin-bottom: 0; }
@@ -673,10 +674,13 @@ The `sprites` mixin generates identical output to the CSS template
       width: 600px; }
       .news .all_news .accordion .active h5 {
         display: block;
-        border: 1px solid #000;
-        margin: 10px 30px; }
+        padding: 10px;
+        border: 1px solid #000; }
       .news .all_news .accordion .active h5::before {
         content: url("../img/plus.png");
+        border-right: 1px solid; }
+      .news .all_news .accordion .active .active::before {
+        content: url("../img/minus.png");
         border-right: 1px solid; }
 
 /*
