@@ -1,0 +1,85 @@
+@import "../css/sprite";
+@import "../scss/_mixins";
+@import "../scss/_fonts";
+
+.news {
+  background: #f7f7f7;
+  .all_news{
+    display: flex;
+    @include margin;
+    .latest_news {
+      padding: 40px 0 100px 0;
+      .head_box {
+        display: flex;
+        &::before {
+          content: url("../img/jan.png");
+          margin-right: 20px;
+          margin-top: 15px;
+        }
+        .advanced_machinery {
+          display: flex;
+          flex-direction: column;
+          color: #8a8a8a;
+          width: 35%;
+          h4 {
+            color: #000;
+            margin-bottom: 0;
+          }
+          h4:hover {
+            color: #248cec;
+          }
+          .under_text {
+            display: flex;
+            span {
+              display: block;
+              margin-right: 5px;
+            }
+            p {
+              color: #0187f4;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
+      .foot_box {
+        display: flex;
+        &::before {
+          content: url("../img/jan21.png");
+          margin-right: 20px;
+          margin-top: 15px;
+        }
+        .powerful {
+          display: flex;
+          flex-direction: column;
+          color: #8a8a8a;
+          width: 35%;
+          h4 {
+            color: #000;
+            margin-bottom: 0;
+          }
+          h4:hover {
+            color: #248cec;
+          }
+          .under_text {
+            display: flex;
+            span {
+              display: block;
+              margin-right: 5px;
+            }
+            p {
+              color: #0187f4;
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .accordion {
+      width: 40%;
+      h5 {
+        border: 1px solid #000;
+      }
+    }
+  }
+
+}

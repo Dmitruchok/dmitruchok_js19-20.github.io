@@ -50,13 +50,69 @@ The `sprites` mixin generates identical output to the CSS template
   src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
-  font-family: 'Ubuntu Condensed';
+  font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
 
 .wrapper {
-  font-family: 'Ubuntu Condensed';
   width: 1160px;
   margin: 0 auto; }
   .wrapper header {
@@ -69,57 +125,58 @@ The `sprites` mixin generates identical output to the CSS template
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 40px 0 20px 0; }
-  .wrapper .icon .facebook::after {
-    background: url(../img/image1.jpg) 0 0 no-repeat;
-    content: "";
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    vertical-align: middle;
-    display: inline-block; }
-  .wrapper .icon .facebook:hover::after {
-    background: url(../img/image1.jpg) 0 -25px no-repeat; }
-  .wrapper .icon .twitter::after {
-    background: url(../img/image1.jpg) -25px 0 no-repeat;
-    content: "";
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    vertical-align: middle;
-    display: inline-block; }
-  .wrapper .icon .twitter:hover::after {
-    background: url(../img/image1.jpg) -25px -25px no-repeat; }
-  .wrapper .icon .rss::after {
-    background: url(../img/image1.jpg) -50px 0 no-repeat;
-    content: "";
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    vertical-align: middle;
-    display: inline-block; }
-  .wrapper .icon .rss:hover::after {
-    background: url(../img/image1.jpg) -50px -25px no-repeat; }
-  .wrapper .icon .linkedin::after {
-    background: url(../img/image1.jpg) -75px 0 no-repeat;
-    content: "";
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    vertical-align: middle;
-    display: inline-block; }
-  .wrapper .icon .linkedin:hover::after {
-    background: url(../img/image1.jpg) -75px -25px no-repeat; }
-  .wrapper .icon .skype::after {
-    background: url(../img/image1.jpg) -100px 0 no-repeat;
-    content: "";
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    vertical-align: middle;
-    display: inline-block; }
-  .wrapper .icon .skype:hover::after {
-    background: url(../img/image1.jpg) -100px -25px no-repeat; }
+    .wrapper header .icon .facebook::after {
+      background: url(../img/image1.jpg) 0 0 no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+      display: inline-block; }
+    .wrapper header .icon .facebook:hover::after {
+      background: url(../img/image1.jpg) 0 -25px no-repeat; }
+    .wrapper header .icon .twitter::after {
+      background: url(../img/image1.jpg) -25px 0 no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+      display: inline-block; }
+    .wrapper header .icon .twitter:hover::after {
+      background: url(../img/image1.jpg) -25px -25px no-repeat; }
+    .wrapper header .icon .rss::after {
+      background: url(../img/image1.jpg) -50px 0 no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+      display: inline-block; }
+    .wrapper header .icon .rss:hover::after {
+      background: url(../img/image1.jpg) -50px -25px no-repeat; }
+    .wrapper header .icon .linkedin::after {
+      background: url(../img/image1.jpg) -75px 0 no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+      display: inline-block; }
+    .wrapper header .icon .linkedin:hover::after {
+      background: url(../img/image1.jpg) -75px -25px no-repeat; }
+    .wrapper header .icon .skype::after {
+      background: url(../img/image1.jpg) -100px 0 no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      vertical-align: middle;
+      display: inline-block; }
+    .wrapper header .icon .skype:hover::after {
+      background: url(../img/image1.jpg) -100px -25px no-repeat; }
   .wrapper nav {
+    font-family: 'Ubuntu Condensed';
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -245,15 +302,72 @@ The `sprites` mixin generates identical output to the CSS template
         margin-top: 10px;
         display: block; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+
 .container {
   background: #2a2d32;
   padding: 50px 0; }
-  .container h3 {
-    color: #fff;
-    padding-bottom: 30px; }
   .container .our_services {
     width: 1160px;
     margin: 0 auto; }
+    .container .our_services h3 {
+      color: #fff;
+      padding-bottom: 30px; }
     .container .our_services .all_services {
       display: -webkit-box;
       display: -webkit-flex;
@@ -301,6 +415,63 @@ The `sprites` mixin generates identical output to the CSS template
       padding-top: 30px; }
     .container .our_services a:hover {
       color: #f4b60d; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
 
 .news {
   background: #f7f7f7; }
@@ -392,9 +563,123 @@ The `sprites` mixin generates identical output to the CSS template
       .news .all_news .accordion h5 {
         border: 1px solid #000; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+
 .brend-icons {
   width: 1160px;
   margin: 0 auto; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
 
 .foot_link {
   background: #2a2d32; }
@@ -430,6 +715,63 @@ The `sprites` mixin generates identical output to the CSS template
       .foot_link .link_box div .last_link {
         border: none; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+
 footer {
   background: #3c3e40;
   color: #5d5f61; }
@@ -461,3 +803,6 @@ footer {
       footer .footer_container .contact_inform .mail:before {
         content: url("../img/email.png");
         margin-right: 10px; }
+
+body {
+  font-family: 'Ubuntu Medium'; }
