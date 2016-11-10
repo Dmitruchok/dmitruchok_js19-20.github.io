@@ -1,0 +1,81 @@
+@mixin column {
+  h3{
+    font-size: 20px
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    color: #248cec;
+  }
+  a::after {
+    background: url('../img/sprites/sprite.png') -10px 0 no-repeat;
+    content: "";
+    width: 10px;
+    height: 11px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  a:hover::after {
+    background-position: 0 0;
+  }
+  img {
+    margin-top: 10px;
+    display: block;
+  }
+}
+
+@mixin hover-link {
+  a:hover {
+    color: #f4b60d;
+  }
+}
+
+@mixin margin {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+@mixin foot-link {
+  h4 {
+    color: #fff;
+    margin: 0;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      border-bottom: 1px solid #5d5f61;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #5d5f61;
+        padding: 10px 0;
+      }
+      a:hover {
+        color: #248cec;
+      }
+    }
+  }
+}
+
+@mixin socisl-link {
+  content: "";
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@mixin service-pic {
+  content: "";
+  width: 260px;
+  height: 260px;
+  margin: 0 40px 40px 0;
+  vertical-align: middle;
+  display: inline-block;
+}

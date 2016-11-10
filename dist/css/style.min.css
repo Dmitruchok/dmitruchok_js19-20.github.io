@@ -56,8 +56,56 @@ The `sprites` mixin generates identical output to the CSS template
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 40px 0 20px 0; }
-  .wrapper .icon a {
-    margin-right: 10px; }
+  .wrapper .icon .facebook::after {
+    background: url(../img/image1.jpg) 0 0 no-repeat;
+    content: "";
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block; }
+  .wrapper .icon .facebook:hover::after {
+    background: url(../img/image1.jpg) 0 -25px no-repeat; }
+  .wrapper .icon .twitter::after {
+    background: url(../img/image1.jpg) -25px 0 no-repeat;
+    content: "";
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block; }
+  .wrapper .icon .twitter:hover::after {
+    background: url(../img/image1.jpg) -25px -25px no-repeat; }
+  .wrapper .icon .rss::after {
+    background: url(../img/image1.jpg) -50px 0 no-repeat;
+    content: "";
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block; }
+  .wrapper .icon .rss:hover::after {
+    background: url(../img/image1.jpg) -50px -25px no-repeat; }
+  .wrapper .icon .linkedin::after {
+    background: url(../img/image1.jpg) -75px 0 no-repeat;
+    content: "";
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block; }
+  .wrapper .icon .linkedin:hover::after {
+    background: url(../img/image1.jpg) -75px -25px no-repeat; }
+  .wrapper .icon .skype::after {
+    background: url(../img/image1.jpg) -100px 0 no-repeat;
+    content: "";
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block; }
+  .wrapper .icon .skype:hover::after {
+    background: url(../img/image1.jpg) -100px -25px no-repeat; }
   .wrapper nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -91,8 +139,8 @@ The `sprites` mixin generates identical output to the CSS template
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
       border: 1px solid #000;
-      height: 25px;
-      margin: 10px;
+      height: 35px;
+      margin: 7px;
       padding: 0 0 0 10px; }
     .wrapper nav input::-webkit-input-placeholder {
       padding-left: 0;
@@ -192,17 +240,47 @@ The `sprites` mixin generates identical output to the CSS template
     padding-bottom: 30px; }
   .container .our_services {
     width: 1160px;
-    margin: 0 auto;
-    /*img:hover {
-      background: rgba(0, 170, 238, 0.9);
-    }*/ }
+    margin: 0 auto; }
     .container .our_services .all_services {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    .container .our_services img {
-      padding-right: 50px; }
+    .container .our_services a:hover::before {
+      background-color: #2c4070;
+      opacity: 0.2; }
+    .container .our_services .schedule_srvices .schedule_pic::before {
+      background: url(../img/Untitled-10.png) no-repeat;
+      content: "";
+      width: 260px;
+      height: 260px;
+      margin: 0 40px 40px 0;
+      vertical-align: middle;
+      display: inline-block; }
+    .container .our_services .preventiv_maintence .preventiv_pic::before {
+      background: url(../img/rdJD.png) no-repeat;
+      content: "";
+      width: 260px;
+      height: 260px;
+      margin: 0 40px 40px 0;
+      vertical-align: middle;
+      display: inline-block; }
+    .container .our_services .wheel_srvices .wheel_pic::before {
+      background: url(../img/Rectangle.png) no-repeat;
+      content: "";
+      width: 260px;
+      height: 260px;
+      margin: 0 40px 40px 0;
+      vertical-align: middle;
+      display: inline-block; }
+    .container .our_services .repair_services .repair_pic::before {
+      background: url(../img/Selective.png) no-repeat;
+      content: "";
+      width: 260px;
+      height: 260px;
+      margin: 0 40px 40px 0;
+      vertical-align: middle;
+      display: inline-block; }
     .container .our_services a {
       display: block;
       color: #fff;
@@ -298,52 +376,8 @@ The `sprites` mixin generates identical output to the CSS template
               margin: 0 10px 0 0; }
     .news .all_news .accordion {
       width: 40%; }
-      .news .all_news .accordion .transition, .news .all_news .accordion p, .news .all_news .accordion ul li i:before, .news .all_news .accordion ul li i:after {
-        -webkit-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out; }
       .news .all_news .accordion h5 {
-        color: #ff6873; }
-      .news .all_news .accordion p {
-        color: rgba(48, 69, 92, 0.8);
-        font-size: 17px;
-        line-height: 26px;
-        letter-spacing: 1px;
-        position: relative;
-        overflow: hidden;
-        max-height: 800px;
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-            -ms-transform: translate(0, 0);
-                transform: translate(0, 0);
-        margin-top: 14px;
-        z-index: 2; }
-      .news .all_news .accordion ul {
-        list-style: none;
-        -webkit-perspective: 900;
-                perspective: 900;
-        padding: 0;
-        margin: 0; }
-      .news .all_news .accordion ul li {
-        position: relative;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 4px;
-        padding-top: 18px;
-        border-top: 1px dotted #dce7eb; }
-      .news .all_news .accordion ul li input[type=checkbox] {
-        position: absolute;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        opacity: 0; }
-      .news .all_news .accordion ul li input[type=checkbox]:checked ~ p {
-        margin-top: 0;
-        max-height: 0;
-        opacity: 0;
-        -webkit-transform: translate(0, 50%);
-            -ms-transform: translate(0, 50%);
-                transform: translate(0, 50%); }
+        border: 1px solid #000; }
 
 .brend-icons {
   width: 1160px;
