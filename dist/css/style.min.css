@@ -47,13 +47,17 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -104,13 +108,33 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 .wrapper {
   width: 1160px;
@@ -208,9 +232,10 @@ The `sprites` mixin generates identical output to the CSS template
     .wrapper nav input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
-      border: 1px solid #000;
+      border: 1px solid #272626;
       height: 35px;
       margin: 7px;
+      width: 205px;
       padding: 0 0 0 10px; }
     .wrapper nav input::-webkit-input-placeholder {
       padding-left: 0;
@@ -351,13 +376,33 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 .container {
   background: #2a2d32;
@@ -465,13 +510,33 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 .news {
   background: #f7f7f7; }
@@ -511,6 +576,7 @@ The `sprites` mixin generates identical output to the CSS template
           .news .all_news .latest_news .head_box .advanced_machinery h4:hover {
             color: #248cec; }
           .news .all_news .latest_news .head_box .advanced_machinery .under_text {
+            font-family: 'Aileron-Regular';
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -521,6 +587,8 @@ The `sprites` mixin generates identical output to the CSS template
             .news .all_news .latest_news .head_box .advanced_machinery .under_text p {
               color: #0187f4;
               margin: 0 10px 0 0; }
+          .news .all_news .latest_news .head_box .advanced_machinery p {
+            font-family: 'Aileron-Regular'; }
       .news .all_news .latest_news .foot_box {
         display: -webkit-box;
         display: -webkit-flex;
@@ -548,6 +616,7 @@ The `sprites` mixin generates identical output to the CSS template
           .news .all_news .latest_news .foot_box .powerful h4:hover {
             color: #248cec; }
           .news .all_news .latest_news .foot_box .powerful .under_text {
+            font-family: "Aileron-Regular";
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -558,6 +627,8 @@ The `sprites` mixin generates identical output to the CSS template
             .news .all_news .latest_news .foot_box .powerful .under_text p {
               color: #0187f4;
               margin: 0 10px 0 0; }
+        .news .all_news .latest_news .foot_box p {
+          font-family: "Aileron-Regular"; }
     .news .all_news .accordion {
       width: 40%; }
       .news .all_news .accordion h5 {
@@ -612,13 +683,33 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 .brend-icons {
   width: 1160px;
@@ -673,15 +764,36 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 .foot_link {
+  font-family: "Aileron-Regular";
   background: #2a2d32; }
   .foot_link .link_box {
     display: -webkit-box;
@@ -712,6 +824,8 @@ The `sprites` mixin generates identical output to the CSS template
             padding: 10px 0; }
           .foot_link .link_box div ul li a:hover {
             color: #248cec; }
+      .foot_link .link_box div h4 {
+        font-family: "Ubuntu Medium"; }
       .foot_link .link_box div .last_link {
         border: none; }
 
@@ -764,15 +878,36 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local("Ubuntu Condensed"), url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
 
 @font-face {
   font-family: 'Ubuntu Medium';
   font-style: normal;
   font-weight: 500;
-  src: local("Ubuntu"), url(../fonts/Ubuntu.woff2) format("woff2"); }
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
 
 footer {
+  font-family: "Aileron-Regular";
   background: #3c3e40;
   color: #5d5f61; }
   footer .footer_container {
@@ -804,5 +939,99 @@ footer {
         content: url("../img/email.png");
         margin-right: 10px; }
 
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }
+
 body {
-  font-family: 'Ubuntu Medium'; }
+  font-family: "Ubuntu Medium";
+  font-size: 15px; }
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Condensed.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Ubuntu.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: url(../fonts/Aileron-Regular.otf) format("otf"); }

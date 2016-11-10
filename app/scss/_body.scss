@@ -3,6 +3,7 @@
 @import "../scss/_fonts";
 @import "../scss/_variable";
 
-.brend-icons {
-  @include margin;
+body {
+  font-family: $font-main;
+  font-size: $main-font-size;
 }

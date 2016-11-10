@@ -1,6 +1,7 @@
 @import "../css/sprite";
 @import "../scss/_mixins";
 @import "../scss/_fonts";
+@import "../scss/_variable";
 
 .wrapper {
 @include margin;
@@ -80,9 +81,10 @@
     input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
-      border: 1px solid #000;
+      border: 1px solid #272626;
       height: 35px;
       margin: 7px;
+      width: 205px;
       padding: 0 0 0 10px;
     }
     input::-webkit-input-placeholder {

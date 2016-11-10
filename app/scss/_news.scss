@@ -1,6 +1,7 @@
 @import "../css/sprite";
 @import "../scss/_mixins";
 @import "../scss/_fonts";
+@import "../scss/_variable";
 
 .news {
   background: #f7f7f7;
@@ -29,15 +30,20 @@
             color: #248cec;
           }
           .under_text {
+            font-family: 'Aileron-Regular';
             display: flex;
             span {
               display: block;
               margin-right: 5px;
             }
             p {
+
               color: #0187f4;
               margin: 0 10px 0 0;
             }
+          }
+          p {
+            font-family: 'Aileron-Regular';
           }
         }
       }
@@ -61,6 +67,7 @@
             color: #248cec;
           }
           .under_text {
+            font-family: $font-link;
             display: flex;
             span {
               display: block;
@@ -71,6 +78,9 @@
               margin: 0 10px 0 0;
             }
           }
+        }
+        p {
+          font-family: $font-link;
         }
       }
     }

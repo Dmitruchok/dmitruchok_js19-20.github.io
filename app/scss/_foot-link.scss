@@ -1,8 +1,11 @@
+
 @import "../css/sprite";
 @import "../scss/_mixins";
 @import "../scss/_fonts";
+@import "../scss/_variable";
 
 .foot_link{
+  font-family: $font-link;
   background: #2a2d32;
   .link_box{
     display: flex;
@@ -12,6 +15,9 @@
     div {
       width: 20%;
       @include foot-link;
+      h4 {
+        font-family: $font-main;
+      }
       .last_link {
         border: none;
       }
