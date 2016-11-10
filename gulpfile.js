@@ -43,6 +43,11 @@ var gulp = require('gulp'),
     .pipe(browserSync.reload({stream: true}))
   });
 
+  gulp.task('fonts', function () {
+    return gulp.src('app/fonts/**/*.*')
+    .pipe(gulp.dest('dist/fonts'))
+  });
+
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
   browserSync({ // Выполняем browser Sync
     server: { // Определяем параметры сервера
@@ -78,10 +83,11 @@ gulp.task('sprite', function () {
   spriteData.css.pipe(gulp.dest('app/css/'));
 });
 
-gulp.task('watch', ['browser-sync', 'scss', 'css', 'html', 'js', 'img', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'scss', 'css', 'html', 'js', 'img', 'fonts', 'scripts'], function() {
   gulp.watch('app/scss/**/*.scss', ['scss']); // Наблюдение за scss файлами в папке sass
   gulp.watch('app/css/**/*.css', ['css']);
   gulp.watch('app/img/**/*.*', ['img']);
+  gulp.watch('app/fonts/**/*.*', ['fonts']);
   gulp.watch('app/*.html', ['html'], browserSync.reload); // Наблюдение за HTML файлами в корне проекта
   gulp.watch('app/js/**/*.js', ['js'], browserSync.reload); // Наблюдение за JS файлами в папке js
 });
