@@ -672,16 +672,47 @@ The `sprites` mixin generates identical output to the CSS template
           font-family: "Aileron-Regular"; }
     .news .all_news .accordion {
       width: 600px; }
-      .news .all_news .accordion .active h5 {
-        display: block;
-        padding: 10px;
+      .news .all_news .accordion .banner_accord .active {
+        background: #f4b60d; }
+        .news .all_news .accordion .banner_accord .active::before {
+          content: url("../img/linkedin.png");
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border-right: 1px solid #000;
+          width: 30px; }
+      .news .all_news .accordion .banner_accord h5 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 30px;
         border: 1px solid #000; }
-      .news .all_news .accordion .active h5::before {
-        content: url("../img/plus.png");
-        border-right: 1px solid; }
-      .news .all_news .accordion .active .active::before {
-        content: url("../img/minus.png");
-        border-right: 1px solid; }
+        .news .all_news .accordion .banner_accord h5::before {
+          content: url("../img/plus.png");
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          border-right: 1px solid #000;
+          width: 30px; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name

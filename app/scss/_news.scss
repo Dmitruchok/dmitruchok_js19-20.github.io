@@ -87,22 +87,34 @@
     }
     .accordion {
       width: 600px;
-      .active {
+      .banner_accord {
+        .active {
+          background: #f4b60d;
+
+          &::before {
+            content: url("../img/linkedin.png");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #000;
+            width: 30px;
+          }
+        }
         h5 {
-          display: block;
-          padding: 10px;
+          display: flex;
+          height: 30px;
           border: 1px solid #000;
+          &::before {
+            content: url("../img/plus.png");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #000;
+            width: 30px;
+          }
         }
-        h5::before {
-          content: url("../img/plus.png");
-          border-right: 1px solid;
-        }
-        .active::before {
-          content: url("../img/minus.png");
-          border-right: 1px solid;
-        }
+
       }
     }
   }
-
 }
