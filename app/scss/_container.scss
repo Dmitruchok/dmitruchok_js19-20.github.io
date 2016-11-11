@@ -22,12 +22,10 @@
       .schedule_pic {
         background: url(../img/Untitled-10.png) no-repeat;
         @include service-pic;
-      }
-      .schedule_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, .7);
-        @include service-pic;
+
+        &:hover::before {
+          @include hover-our-services;
+        }
       }
 
       h4 {
@@ -39,13 +37,9 @@
       .preventiv_pic {
         background: url(../img/rdJD.png) no-repeat;
         @include service-pic;
-      }
-
-      .preventiv_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, .7);
-        @include service-pic;
+        &:hover::before {
+          @include hover-our-services;
+        }
       }
 
       h4 {
@@ -57,13 +51,9 @@
       .wheel_pic {
         background: url(../img/Rectangle.png) no-repeat;
         @include service-pic;
-      }
-
-      .wheel_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, .7);
-        @include service-pic;
+        &:hover::before {
+          @include hover-our-services;
+        }
       }
 
       h4 {
@@ -74,13 +64,10 @@
       .repair_pic {
         background: url(../img/Selective.png) no-repeat;
         @include service-pic;
-      }
 
-      .repair_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, .7);
-        @include service-pic;
+        &:hover::before {
+          @include hover-our-services;
+        }
       }
 
       h4 {

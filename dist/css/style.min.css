@@ -217,18 +217,20 @@ The `sprites` mixin generates identical output to the CSS template
       display: flex;
       padding: 0;
       margin: 0; }
-      .wrapper nav ul .blue {
+      .wrapper nav ul li.blue {
         background: #248cec; }
+      .wrapper nav ul li.blue:hover {
+        background: #2a2d32; }
       .wrapper nav ul li {
         list-style: none;
         padding: 17px 25px;
-        border-right: 1px solid #000; }
+        border-right: 1px solid #211d1d; }
         .wrapper nav ul li a {
           font-size: 15px;
           color: #fff;
           text-decoration: none; }
-        .wrapper nav ul li a:hover {
-          color: #f4b60d; }
+          .wrapper nav ul li a:hover {
+            color: #f4b60d; }
     .wrapper nav input {
       background: url("../img/search.png") 95% 50% no-repeat, #35383c;
       outline: none;
@@ -426,16 +428,16 @@ The `sprites` mixin generates identical output to the CSS template
         margin: 0 40px 40px 0;
         vertical-align: middle;
         display: inline-block; }
-      .container .our_services .all_services .schedule_srvices .schedule_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, 0.7);
-        content: "";
-        width: 260px;
-        height: 260px;
-        margin: 0 40px 40px 0;
-        vertical-align: middle;
-        display: inline-block; }
+        .container .our_services .all_services .schedule_srvices .schedule_pic:hover::before {
+          background: url(../img/1.png) no-repeat;
+          background-position: center;
+          background-color: rgba(7, 91, 169, 0.7);
+          content: "";
+          width: 260px;
+          height: 260px;
+          margin: 0 40px 40px 0;
+          vertical-align: middle;
+          display: inline-block; }
       .container .our_services .all_services .schedule_srvices h4 {
         color: #fff; }
       .container .our_services .all_services .preventiv_maintence .preventiv_pic {
@@ -446,16 +448,16 @@ The `sprites` mixin generates identical output to the CSS template
         margin: 0 40px 40px 0;
         vertical-align: middle;
         display: inline-block; }
-      .container .our_services .all_services .preventiv_maintence .preventiv_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, 0.7);
-        content: "";
-        width: 260px;
-        height: 260px;
-        margin: 0 40px 40px 0;
-        vertical-align: middle;
-        display: inline-block; }
+        .container .our_services .all_services .preventiv_maintence .preventiv_pic:hover::before {
+          background: url(../img/1.png) no-repeat;
+          background-position: center;
+          background-color: rgba(7, 91, 169, 0.7);
+          content: "";
+          width: 260px;
+          height: 260px;
+          margin: 0 40px 40px 0;
+          vertical-align: middle;
+          display: inline-block; }
       .container .our_services .all_services .preventiv_maintence h4 {
         color: #fff; }
       .container .our_services .all_services .wheel_srvices .wheel_pic {
@@ -466,16 +468,16 @@ The `sprites` mixin generates identical output to the CSS template
         margin: 0 40px 40px 0;
         vertical-align: middle;
         display: inline-block; }
-      .container .our_services .all_services .wheel_srvices .wheel_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, 0.7);
-        content: "";
-        width: 260px;
-        height: 260px;
-        margin: 0 40px 40px 0;
-        vertical-align: middle;
-        display: inline-block; }
+        .container .our_services .all_services .wheel_srvices .wheel_pic:hover::before {
+          background: url(../img/1.png) no-repeat;
+          background-position: center;
+          background-color: rgba(7, 91, 169, 0.7);
+          content: "";
+          width: 260px;
+          height: 260px;
+          margin: 0 40px 40px 0;
+          vertical-align: middle;
+          display: inline-block; }
       .container .our_services .all_services .wheel_srvices h4 {
         color: #fff; }
       .container .our_services .all_services .repair_services .repair_pic {
@@ -486,16 +488,16 @@ The `sprites` mixin generates identical output to the CSS template
         margin: 0 40px 40px 0;
         vertical-align: middle;
         display: inline-block; }
-      .container .our_services .all_services .repair_services .repair_pic:hover::before {
-        background: url(../img/1.png) no-repeat;
-        background-position: center;
-        background-color: rgba(7, 91, 169, 0.7);
-        content: "";
-        width: 260px;
-        height: 260px;
-        margin: 0 40px 40px 0;
-        vertical-align: middle;
-        display: inline-block; }
+        .container .our_services .all_services .repair_services .repair_pic:hover::before {
+          background: url(../img/1.png) no-repeat;
+          background-position: center;
+          background-color: rgba(7, 91, 169, 0.7);
+          content: "";
+          width: 260px;
+          height: 260px;
+          margin: 0 40px 40px 0;
+          vertical-align: middle;
+          display: inline-block; }
       .container .our_services .all_services .repair_services h4 {
         color: #fff; }
       .container .our_services .all_services a:hover + h4 {
@@ -614,8 +616,8 @@ The `sprites` mixin generates identical output to the CSS template
           .news .all_news .latest_news .head_box .advanced_machinery h4 {
             color: #000;
             margin-bottom: 0; }
-          .news .all_news .latest_news .head_box .advanced_machinery h4:hover {
-            color: #248cec; }
+            .news .all_news .latest_news .head_box .advanced_machinery h4:hover {
+              color: #248cec; }
           .news .all_news .latest_news .head_box .advanced_machinery .under_text {
             display: -webkit-box;
             display: -webkit-flex;
@@ -655,8 +657,8 @@ The `sprites` mixin generates identical output to the CSS template
           .news .all_news .latest_news .foot_box .powerful h4 {
             color: #000;
             margin-bottom: 0; }
-          .news .all_news .latest_news .foot_box .powerful h4:hover {
-            color: #248cec; }
+            .news .all_news .latest_news .foot_box .powerful h4:hover {
+              color: #248cec; }
           .news .all_news .latest_news .foot_box .powerful .under_text {
             display: -webkit-box;
             display: -webkit-flex;

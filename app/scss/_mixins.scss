@@ -79,3 +79,10 @@
   vertical-align: middle;
   display: inline-block;
 }
+
+@mixin hover-our-services {
+  background: url(../img/1.png) no-repeat;
+  background-position: center;
+  background-color: rgba(7, 91, 169, .7);
+  @include service-pic;
+}

@@ -26,9 +26,9 @@
           h4 {
             color: #000;
             margin-bottom: 0;
-          }
-          h4:hover {
-            color: #248cec;
+            &:hover {
+              color: #248cec;
+            }
           }
           .under_text {
             display: flex;
@@ -64,9 +64,9 @@
           h4 {
             color: #000;
             margin-bottom: 0;
-          }
-          h4:hover {
-            color: #248cec;
+            &:hover {
+              color: #248cec;
+            }
           }
           .under_text {
             display: flex;

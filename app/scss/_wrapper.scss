@@ -62,20 +62,24 @@
       display: flex;
       padding: 0;
       margin: 0;
-      .blue{
+      li.blue{
         background: #248cec;
       }
+      li.blue:hover {
+        background: #2a2d32;
+      }
+
       li {
         list-style: none;
         padding: 17px 25px;
-        border-right: 1px solid #000;
+        border-right: 1px solid #211d1d;
         a {
           font-size: 15px;
           color: #fff;
           text-decoration: none;
-        }
-        a:hover {
-          color: #f4b60d;
+          &:hover {
+            color: #f4b60d;
+          }
         }
       }
     }
