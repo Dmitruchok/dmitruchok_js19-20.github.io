@@ -31,8 +31,9 @@
             color: #248cec;
           }
           .under_text {
-            font-family: 'Aileron-Regular';
             display: flex;
+            font-family: $font-link;
+            margin-top: 5px;
             span {
               display: block;
               margin-right: 5px;
@@ -44,7 +45,7 @@
             }
           }
           p {
-            font-family: 'Aileron-Regular';
+            font-family: $font-link;
           }
         }
       }
@@ -68,8 +69,9 @@
             color: #248cec;
           }
           .under_text {
-            font-family: $font-link;
             display: flex;
+            font-family: $font-link;
+            margin-top: 5px;
             span {
               display: block;
               margin-right: 5px;
@@ -88,32 +90,42 @@
     .accordion {
       width: 600px;
       .banner_accord {
+        margin-top: 28px;
         .active {
           background: #f4b60d;
+          color: #fff;
 
           &::before {
-            content: url("../img/linkedin.png");
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-right: 1px solid #000;
-            width: 30px;
+            content: '';
+            background: url("../img/minus.png") no-repeat;
+            background-position: center;
+            margin-bottom: 0;
+            margin-right: 15px;
+            padding: 0 15px 0 15px;
           }
         }
         h5 {
           display: flex;
+          margin-bottom: 0;
           height: 30px;
-          border: 1px solid #000;
+          border: 1px solid #ddd;
+          color: #2a2d32;
+          line-height: 27px;
           &::before {
-            content: url("../img/plus.png");
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-right: 1px solid #000;
-            width: 30px;
+            content: '';
+            background: url("../img/plus.png") no-repeat;
+            background-position: center;
+            border-right: 2px solid #eee;
+            margin-right: 15px;
+            padding: 0 15px 0 15px;
           }
         }
 
+        p {
+          font-family: $font-link;
+          color: #8a8a8a;
+          margin-left: 35px;
+        }
       }
     }
   }
